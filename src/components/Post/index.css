@@ -1,0 +1,111 @@
+.post-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  width: 70%;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1110px;
+  padding-bottom: 25px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.user-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.user-profile-img {
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.user-namee {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 16px;
+  color: #262626;
+  line-height: 20px;
+}
+@media screen and (max-width: 768px) {
+  .user-namee {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-profile-img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: 70vh;
+}
+
+@media screen and (max-width: 768px) {
+  .main-image {
+    height: 200px;
+    width: 70%;
+  }
+}
+
+.comment-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.comments-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.comment {
+  font-family: Roboto;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.comment-text {
+  font-weight: 300;
+}
+
+.time {
+  color: #989898;
+  font-size: 14px;
+}

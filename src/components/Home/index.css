@@ -1,4 +1,4 @@
 .main-container-home-route {
   background-color: #fafafa;
-  height: 100vh;
+  min-height: 100vh;
 }

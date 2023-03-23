@@ -33,13 +33,11 @@ class InstaPost extends Component {
     likesCount: ele.likes_count,
     userId: ele.user_id,
     userName: ele.user_name,
-    profilePic: ele.profilePic,
+    profilePic: ele.profile_pic,
     postId: ele.post_id,
     comments: this.modifyAllComments(ele.comments),
-    postDetails: {
-      caption: ele.post_details.caption,
-      imageUrl: ele.post_details.image_url,
-    },
+    imageUrl: ele.post_details.image_url,
+    caption: ele.post_details.caption,
   })
 
   getInstaFeed = async () => {
@@ -93,19 +91,38 @@ class InstaPost extends Component {
 
   renderSuccessView = () => {
     const {posts} = this.state
+    console.log(posts)
     return (
       <ul>
         {posts.map(each => (
-          <Post postDetails={each} />
+          <>
+            {/*
+            <img alt="" src={each.profilePic} />
+            <h1>{each.userName}</h1>
+            */}
+            <Post postDetails={each} />
+          </>
         ))}
       </ul>
     )
   }
 
-  render() {
+  renderBasedOnApiStatus = () => {
     const {apiStatus} = this.state
-    // console.log(apiStatus)
-    return <h1>Instafeed</h1>
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderSuccessView()
+      case apiStatusConstants.failure:
+        return this.renderFailureView()
+      case apiStatusConstants.inProcess:
+        return this.renderLoadingView()
+      default:
+        return null
+    }
+  }
+
+  render() {
+    return <div>{this.renderBasedOnApiStatus()}</div>
   }
 }
 
