@@ -130,7 +130,7 @@ class UserStories extends Component {
           return (
             <div className="list-item" key={userId}>
               <img src={storyUrl} alt="user-story" className="story-image" />
-              <h1 className="user-name">{userName}</h1>
+              <h1 className="user-name2">{userName}</h1>
             </div>
           )
         })}

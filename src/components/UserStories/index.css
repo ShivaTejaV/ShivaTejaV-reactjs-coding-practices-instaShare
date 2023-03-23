@@ -6,7 +6,7 @@
 }
 
 .slick-container {
-  width: 80%;
+  width: 70%;
   max-width: 1100px;
   margin-top: 5px;
 }
@@ -36,10 +36,10 @@
   margin: 0px;
 }
 
-.user-name {
+.user-name2 {
   font-family: Roboto;
-  font-size: 1vw;
-  max-width: 5vw;
+  font-size: 12px;
+  max-width: 10vw;
 }
 
 .story-image:hover {

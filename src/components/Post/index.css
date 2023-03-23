@@ -8,6 +8,8 @@
   width: 70%;
   margin: auto;
   margin-top: 5vh;
+  border: 2px solid #dfdfdf;
+  border-radius: 8px;
 }
 
 .post-content {
@@ -17,7 +19,7 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 1110px;
-  padding-bottom: 25px;
+  padding-bottom: 2vh;
   margin-top: 0px;
   padding-top: 0px;
 }
@@ -65,7 +67,7 @@
 
 .main-image {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,6 +77,33 @@
   }
 }
 
+.post-interactions {
+  padding-left: 2vw;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.like-comment-share {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+}
+
+.likes-count {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+}
+
+.caption {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+}
+
 .comment-list {
   display: flex;
   justify-content: flex-start;
@@ -82,8 +111,8 @@
   flex-direction: column;
   list-style-type: none;
   width: 100%;
-  padding-left: 0px;
-  margin-left: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .comments-container {
@@ -92,6 +121,8 @@
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .comment {
@@ -99,6 +130,9 @@
   color: #262626;
   font-size: 14px;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 .comment-text {
@@ -108,4 +142,6 @@
 .time {
   color: #989898;
   font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
