@@ -4,6 +4,7 @@ import {Component} from 'react'
 
 import Header from '../Header'
 import UserStories from '../UserStories'
+import InstaFeed from '../InstaFeed'
 
 import './index.css'
 
@@ -29,6 +30,7 @@ class Home extends Component {
         <div className="main-container-home-route">
           <Header />
           <UserStories />
+          <InstaFeed />
         </div>
       </>
     )

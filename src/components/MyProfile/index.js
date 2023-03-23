@@ -83,21 +83,25 @@ class MyProfile extends Component {
     </div>
   )
 
+  retry() {
+    this.getMyProfileData()
+  }
+
   renderFailureView = () => (
     <div className="failure-view-container">
       <img
-        src="https://res.cloudinary.com/dngrmtiw7/image/upload/v1679237729/CCBP/REACT_MiniProject_instaShare/Home_Route/failure_symbol_nqxwbx.jpg"
-        alt="failure-view"
+        src="https://res.cloudinary.com/dngrmtiw7/image/upload/v1679554270/CCBP/REACT_MiniProject_instaShare/Home_Route/alert-traingle_ib484g.png"
+        alt="failure view"
         className="failure-image"
       />
-      <h1 className="failure-view-heading">
-        Something went wrong.Please try again
-      </h1>
+      <p className="failure-view-heading">
+        Something went wrong. Please try again
+      </p>
       <button
         type="button"
         className="retry-button"
-        onClick={this.onClickRetry}
         data-testid="button"
+        onClick={this.retry}
       >
         Try again
       </button>

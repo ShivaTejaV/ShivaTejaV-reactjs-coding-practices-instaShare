@@ -24,7 +24,7 @@ class Login extends Component {
 
   onSubmitForm = async event => {
     event.preventDefault()
-    console.log('Submitted')
+    // console.logconsole.log('Submitted')
     const {username, password} = this.state
     const userDetails = {
       username,
@@ -39,17 +39,17 @@ class Login extends Component {
     }
 
     const response = await fetch(url, options)
-    console.log(response)
+    // console.log(response)
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
     if (response.ok === true) {
       const jwtToken = data.jwt_token
       const {history} = this.props
       Cookies.set('jwt_token', jwtToken, {expires: 30, path: '/'})
       history.replace('/')
     } else {
-      const errMsg = data.err_msg
-      console.log(errMsg)
+      const errMsg = data.error_msg
+      // console.log(errMsg)
       this.setState({showError: true, errorMessage: errMsg})
     }
   }
@@ -60,7 +60,7 @@ class Login extends Component {
       <div className="login-bg">
         <div className="left-section">
           <img
-            alt="login-background"
+            alt="website login"
             className="img-login-page"
             src="https://res.cloudinary.com/dngrmtiw7/image/upload/v1678621782/CCBP/REACT_MiniProject_instaShare/Login_Route/Layer_2_fzeeha.png"
           />
@@ -68,8 +68,8 @@ class Login extends Component {
         <div className="right-section">
           <div className="logo-and-title">
             <img
-              className="logo"
-              alt="logo"
+              className="website logo"
+              alt="website logo"
               src="https://res.cloudinary.com/dngrmtiw7/image/upload/v1678625132/CCBP/REACT_MiniProject_instaShare/Login_Route/Standard_Collection_8_o7ow7t.jpg"
             />
             <h1 className="title">Insta Share</h1>
@@ -109,7 +109,7 @@ class Login extends Component {
 
   render() {
     const jwtToken = Cookies.get('jwt_token')
-    console.log(jwtToken)
+    // console.log(jwtToken)
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }

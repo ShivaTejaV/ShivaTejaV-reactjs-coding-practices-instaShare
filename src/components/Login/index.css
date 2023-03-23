@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 70vw;
 }
 
 .right-section {
@@ -23,9 +24,19 @@
   width: 30vw;
 }
 
+@media screen and (max-width: 768px) {
+  .left-section {
+    display: none;
+  }
+
+  .right-section {
+    width: 100vw;
+  }
+}
+
 .img-login-page {
-  height: 373px;
-  width: 582px;
+  height: 50vh;
+  width: 40vw;
 }
 
 .label {

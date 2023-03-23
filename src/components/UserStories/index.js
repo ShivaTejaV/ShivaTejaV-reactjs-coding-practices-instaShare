@@ -66,7 +66,7 @@ class UserStories extends Component {
 
   getUserStories = async () => {
     const jwtToken = Cookies.get('jwt_token')
-    console.log(jwtToken)
+    // console.log(jwtToken)
     this.setState({apiStatus: apiStatusConstants.inProcess})
     const apiUrl = 'https://apis.ccbp.in/insta-share/stories'
     const options = {
@@ -75,7 +75,7 @@ class UserStories extends Component {
     }
 
     const response = await fetch(apiUrl, options)
-    console.log(response)
+    // console.log(response)
     if (response.ok === true) {
       const data = await response.json()
       const updatedData = data.users_stories.map(eachStory => ({
