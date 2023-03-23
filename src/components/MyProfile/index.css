@@ -1,0 +1,299 @@
+/* success View */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  background-color: #fafafa;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  max-width: 1110px;
+}
+
+.profile-container {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-right: 5vw;
+}
+@media screen and (max-width: 768px) {
+  .profile-container {
+    margin-top: 0px;
+  }
+}
+
+.profile-pic {
+  border-radius: 120px;
+  height: 200px;
+  width: 200px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .profile-pic {
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+  }
+}
+
+.username-and-stats {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.user-name {
+  font-family: 'Roboto';
+  color: #0e0b40;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .user-name {
+    font-size: 20px;
+    margin: 0px;
+  }
+}
+
+.user-stats {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+}
+
+.stat-name {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #171613;
+  line-height: 1.5;
+  margin-right: 4vw;
+}
+
+@media screen and (max-width: 768px) {
+  .stat-name {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.5;
+    padding: 5px;
+  }
+}
+
+.stat-value {
+  font-weight: 900;
+  padding-right: 1 vw;
+}
+
+.user-id {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 90%;
+}
+
+.user-bio {
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .user-id {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .user-bio {
+    font-size: 12px;
+  }
+}
+
+.user-stories-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.story-item {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.user-story {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+}
+.user-story:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .user-story {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.story-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  max-width: 1110px;
+  margin-top: 5vh;
+}
+
+.story-item {
+  list-style-type: none;
+  margin-left: 5vw;
+}
+
+.my-story {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+}
+.my-story:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .my-story {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.post-container-main {
+  align-self: center;
+  width: 100%;
+  margin-left: 20vw;
+}
+
+.post-heading {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.posts-text {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 2vw;
+}
+
+.all-post-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.post-img-container {
+  margin: 10px;
+}
+
+.post-img {
+  height: 250px;
+  width: 250px;
+}
+
+.post-img:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+@media and (max-width: 768px) {
+  .post-image {
+    height: 100px;
+    width: 100px;
+  }
+}
+/* loading view */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* failure-view */
+
+.failure-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.failure-view-heading {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 30px;
+  color: #989898;
+}
+
+@media screen and (max-width: 768px) {
+  .no-found-heading {
+    font-size: 20px;
+  }
+}
+
+.failure-image {
+  height: 300px;
+  width: 300px;
+}
+@media screen and (max-width: 768px) {
+  .failure-image {
+    height: 150px;
+    width: 15px;
+  }
+}
+
+.retry-button {
+  height: 6vh;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 3vh;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  margin-left: 14px;
+  cursor: pointer;
+  outline: none;
+}

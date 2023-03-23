@@ -1,0 +1,99 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-container {
+  width: 80%;
+  max-width: 1100px;
+  margin-top: 5px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vh;
+  padding-left: 4vw;
+}
+
+.story-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border-radius: 35px;
+  width: 70px;
+  margin: 0px;
+}
+
+.user-name {
+  font-family: Roboto;
+  font-size: 1vw;
+  max-width: 5vw;
+}
+
+.story-image:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+.loader-container-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.failure-view-heading {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 30px;
+  color: #989898;
+}
+
+@media screen and (max-width: 768px) {
+  .no-found-heading {
+    font-size: 20px;
+  }
+}
+
+.failure-image {
+  height: 300px;
+  width: 300px;
+}
+@media screen and (max-width: 768px) {
+  .failure-image {
+    height: 150px;
+    width: 15px;
+  }
+}
+
+.retry-btn {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 10px;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  margin-left: 14px;
+  cursor: pointer;
+  outline: none;
+}
