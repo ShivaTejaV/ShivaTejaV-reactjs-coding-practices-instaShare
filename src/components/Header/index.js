@@ -107,43 +107,25 @@ class Header extends Component {
           {isShowMobileMenu && (
             <div className="menu-mobile-container">
               <ul className="mobile-menu-nav-item-container">
-                {/* <li className="nav-menu-item">
-                  <button
-                    type="button"
-                    className="mobile-menu-btn"
-                    
-                  >
-                    <FaSearch className="search-icon-mobile" />
-                  </button>
-                </li> */}
-                <li className="nav-menu-item">
+                <li key="Home" className="nav-menu-item">
                   <Link to="/" className="nav-link">
                     <p className="mobile-menu-item"> Home</p>
                   </Link>
                 </li>
                 <li
+                  key="Search"
                   className="nav-menu-item"
                   data-testid="searchIcon"
                   onClick={this.onClickSearchTab}
                 >
                   <p className="mobile-menu-item"> Search</p>
                 </li>
-                <li className="nav-menu-item">
+                <li key="Profile" className="nav-menu-item">
                   <Link to="/my-profile" className="nav-link">
                     <p className="mobile-menu-item">Profile</p>
                   </Link>
                 </li>
-                {/* <li className="nav-item-mobile">
-                  <button
-                    type="button"
-                    className="mobile-menu-btn"
-                    onClick={this.onClickLogout}
-                  >
-                    <HiOutlineLogout />
-                  </button>
-                </li>
-                */}
-                <li className="nav-item-mobile">
+                <li key="close" className="nav-item-mobile">
                   <button
                     type="button"
                     data-testid="closeIcon"

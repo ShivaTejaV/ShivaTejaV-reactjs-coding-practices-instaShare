@@ -91,15 +91,10 @@ class InstaPost extends Component {
 
   renderSuccessView = () => {
     const {posts} = this.state
-    console.log(posts)
     return (
       <ul>
         {posts.map(each => (
           <>
-            {/*
-            <img alt="" src={each.profilePic} />
-            <h1>{each.userName}</h1>
-            */}
             <Post postDetails={each} />
           </>
         ))}
