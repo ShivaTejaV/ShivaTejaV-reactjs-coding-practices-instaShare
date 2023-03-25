@@ -159,14 +159,13 @@ class Home extends Component {
     const {searchInput} = this.state
     return (
       <>
+        <Header
+          searchInput={searchInput}
+          onClickSearch={this.onClickSearch}
+          changeSearchInput={this.onChangeSearchInput}
+          onEnterSearchInput={this.onEnterSearchInput}
+        />
         <div className="main-container-home-route">
-          <Header
-            searchInput={searchInput}
-            onClickSearch={this.onClickSearch}
-            changeSearchInput={this.onChangeSearchInput}
-            onEnterSearchInput={this.onEnterSearchInput}
-          />
-
           {searchInput === '' ? (
             <>
               <UserStories />

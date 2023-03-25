@@ -8,6 +8,7 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import {GiHamburgerMenu} from 'react-icons/gi'
 // import {HiOutlineLogout} from 'react-icons/hi'
 import {FaSearch} from 'react-icons/fa'
+// import useSticky from './useSticky'
 
 class Header extends Component {
   state = {isShowMobileMenu: false, isShowSearch: false}

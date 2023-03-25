@@ -23,7 +23,7 @@ class UserProfile extends Component {
     storyDetails: [],
   }
 
-  componentDidCatch() {
+  componentDidMount() {
     this.getUserProfileData()
   }
 
@@ -54,11 +54,12 @@ class UserProfile extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const data = await response.json()
-      console.log(`Data of User Profile ${data}`)
-      const modifiedData = this.modifyData(data)
+      // console.log(`Data of User Profile`, data)
+      const modifiedData = this.modifyData(data.user_details)
+      // console.log(modifiedData)
       this.setState({
         apiStatus: apiStatusConstants.success,
-        userProfile: modifiedData.userProfile,
+        userProfile: modifiedData,
         postDetails: modifiedData.posts,
         storyDetails: modifiedData.stories,
       })
@@ -108,14 +109,13 @@ class UserProfile extends Component {
       userBio,
       userName,
       userId,
-      id,
     } = userProfile
 
     return (
       <div className="main-container">
         <div className="user-details">
           <div className="profile-container">
-            <img className="profile-pic" alt="my profile" src={profilePic} />
+            <img className="profile-pic" alt="user profile" src={profilePic} />
           </div>
           <div className="username-and-stats">
             <h1 className="user-name">{userName}</h1>
@@ -146,7 +146,7 @@ class UserProfile extends Component {
         <ul className="story-list">
           {storyDetails.map(each => (
             <li className="story-item" key={each.id}>
-              <img className="my-story" alt="my story" src={each.image} />
+              <img className="my-story" alt="user story" src={each.image} />
             </li>
           ))}
         </ul>
@@ -162,7 +162,7 @@ class UserProfile extends Component {
                   <img
                     className="post-img"
                     src={eachPost.image}
-                    alt="my post"
+                    alt="user post"
                   />
                 </li>
               ))}

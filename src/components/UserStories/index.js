@@ -5,7 +5,6 @@ import Cookies from 'js-cookie'
 
 // import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
-import Header from '../Header'
 
 import './index.css'
 
@@ -17,18 +16,18 @@ const apiStatusConstants = {
 }
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 500,
   slidesToShow: 6,
-  slidesToScroll: 4,
+  slidesToScroll: 2,
   initialSlide: 0,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 5,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
         dots: true,
       },
@@ -37,7 +36,7 @@ const settings = {
       breakpoint: 600,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         initialSlide: 2,
       },
     },
@@ -45,7 +44,7 @@ const settings = {
       breakpoint: 480,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
       },
     },
   ],
@@ -129,10 +128,12 @@ class UserStories extends Component {
         {userStories.map(each => {
           const {userId, userName, storyUrl} = each
           return (
-            <div className="list-item" key={userId}>
-              <img src={storyUrl} alt="user-story" className="story-image" />
-              <h1 className="user-name2">{userName}</h1>
-            </div>
+            <ul className="" key={userId}>
+              <li className="list-item">
+                <img src={storyUrl} alt="user-story" className="story-image" />
+                <h1 className="user-name2">{userName}</h1>
+              </li>
+            </ul>
           )
         })}
       </Slider>
@@ -156,7 +157,6 @@ class UserStories extends Component {
   render() {
     return (
       <div className="main-container">
-        <Header />
         <div className="slick-container">{this.renderViewBasedOnStatus()}</div>
       </div>
     )
