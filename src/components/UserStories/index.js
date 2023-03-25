@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 
 // import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
+import Header from '../Header'
 
 import './index.css'
 
@@ -155,6 +156,7 @@ class UserStories extends Component {
   render() {
     return (
       <div className="main-container">
+        <Header />
         <div className="slick-container">{this.renderViewBasedOnStatus()}</div>
       </div>
     )

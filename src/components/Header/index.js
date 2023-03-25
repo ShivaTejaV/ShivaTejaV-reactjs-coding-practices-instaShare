@@ -32,7 +32,7 @@ class Header extends Component {
     history.replace('/login')
   }
 
-  // functons guven from  Home Route //
+  // functions given from  Home Route //
   onClickSearchButton = () => {
     const {onClickSearch} = this.props
     onClickSearch()
@@ -50,7 +50,7 @@ class Header extends Component {
     }
   }
 
-  // functons guven from  Home Route //
+  // functions given from  Home Route //
 
   renderSearchInput = () => {
     const {searchInput} = this.props
