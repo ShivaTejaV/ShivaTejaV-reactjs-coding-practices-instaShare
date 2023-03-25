@@ -1,5 +1,14 @@
 /* failue-view */
 
+.insta-feed-container {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  padding-left: 0%;
+}
+
 .failure-view-container {
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@
 .slick-container {
   width: 80%;
   max-width: 1100px;
-  margin-top: 55px;
+  margin-top: 5px;
 }
 
 .slick-prev:before,
@@ -26,6 +26,12 @@
   padding-right: 4vw;
 }
 
+@media screen and (max-width: 768px) {
+  .list-item {
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+}
 .story-list {
   list-style-type: none;
   display: flex;

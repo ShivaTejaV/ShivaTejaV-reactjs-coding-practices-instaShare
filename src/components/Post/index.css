@@ -12,6 +12,12 @@
   border-radius: 8px;
 }
 
+@media screen and (max-width: 768px) {
+  .post-container {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
 .post-content {
   display: flex;
   flex-direction: column;
@@ -73,7 +79,6 @@
 @media screen and (max-width: 768px) {
   .main-image {
     height: 200px;
-    width: 70%;
   }
 }
 

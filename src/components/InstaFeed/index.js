@@ -92,7 +92,7 @@ class InstaPost extends Component {
   renderSuccessView = () => {
     const {posts} = this.state
     return (
-      <ul>
+      <ul className="list">
         {posts.map(each => (
           <>
             <Post postDetails={each} />
@@ -117,7 +117,11 @@ class InstaPost extends Component {
   }
 
   render() {
-    return <div>{this.renderBasedOnApiStatus()}</div>
+    return (
+      <div className="insta-feed-container">
+        {this.renderBasedOnApiStatus()}
+      </div>
+    )
   }
 }
 
